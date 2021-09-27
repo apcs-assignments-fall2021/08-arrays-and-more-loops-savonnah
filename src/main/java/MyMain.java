@@ -37,8 +37,14 @@ public class MyMain {
     // Replaces all duplicate values with -1
     // Ex. duplicateReplacer([1, 2, 1, 2, 1, 1]) => [1, 2, -1, -1, -1, -1]
     public static int[] duplicateReplacer(int[] arr) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        for (int i = 0; i<arr.length; i++){
+            for (int x = i+1; x<arr.length; x++){// finish going through all array before goes back to top for loop
+                if (arr[i] == arr[x]){ // so goes through entire array and compares it to arr[i] (which is constant until finished going through entire array
+                    arr[x] = -1;
+                }
+            }
+        }
+        return arr;
     }
 
 
